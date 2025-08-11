@@ -9,6 +9,7 @@ This project implements a modern sign-in flow using Next.js, React Hook Form, Zo
 - **Validation:** Email and password are validated using Zod schema.
 - **Mock API Integration:** Credentials are sent to `/api/auth/signin` for authentication.
 - **Error Handling:** Displays server and validation errors in the UI.
+- **Loading State:** Shows a loading indicator while sign-in is in progress.
 
 ## Key Files
 
