@@ -27,7 +27,7 @@ export default function SignInForm() {
     formState: { isSubmitting },
   } = useForm<SignInSchemaType>({
     resolver: zodResolver(SignInSchema),
-    defaultValues: { email: '', password: '', remember: false },
+    defaultValues: { email: '', password: '' },
   });
 
   // Handles final sign-in
@@ -37,11 +37,6 @@ export default function SignInForm() {
     if (!res.ok) {
       setServerError(res.message || 'পরিচয় সনাক্ত করা যায় নি');
       return;
-    }
-    if (data.remember) {
-      localStorage.setItem('authToken', res.token || '');
-    } else {
-      sessionStorage.setItem('authToken', res.token || '');
     }
     router.push('/dashboard');
   };

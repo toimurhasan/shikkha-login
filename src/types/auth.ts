@@ -5,7 +5,6 @@
 export interface SignInPayload {
   email: string;
   password: string;
-  rememberMe?: boolean; // Optional field for "remember me" functionality
 }
 
 /**
