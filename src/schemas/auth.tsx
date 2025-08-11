@@ -3,8 +3,8 @@ import { z } from 'zod';
 /**
  * Validation schema for Sign-In form inputs.
  *
- * - `email`: required, must be a valid email format, with Bangla error messages.
- * - `password`: required, minimum 7 characters, with Bangla error message.
+ * - `email`: required, must be a valid email format.
+ * - `password`: required, minimum 7 characters.
  */
 export const SignInSchema = z.object({
   email: z.string().min(1, 'ইমেইল প্রদান করুন').email('সঠিক ইমেইল প্রদান করুন'),

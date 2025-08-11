@@ -20,7 +20,6 @@ import { SignInSchemaType } from 'src/schemas/auth';
  *
  * Accessibility:
  * - Includes proper label text in Bangla for target users.
- * - Compatible with browser autofill for the email field.
  *
  * @component
  * @example

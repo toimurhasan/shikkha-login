@@ -15,8 +15,9 @@ const defaultTheme = createTheme();
  * Features:
  * - Wraps the sign-in form inside Material UI's ThemeProvider with a default theme,
  *   enabling consistent theming across the form and its child components.
- * - Uses MUI's Container and Box components to center the form vertically and horizontally,
- *   optimizing for small screen widths (`maxWidth="xs"`) to improve usability on mobile devices.
+ * - Uses MUI's Container and Box components to center the form vertically and horizontally.
+ * - Uses maxWidth="xs" on the Container to center the component within the screen,
+ *   optimizing for small screen widths to improve usability on mobile devices.
  * - Encapsulates the SignInForm within a Paper component with padding and rounded corners,
  *   providing a clean and focused card-like UI.
  * - Applies a light grey background (`grey.100`) to the entire page for subtle contrast.

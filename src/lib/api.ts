@@ -6,10 +6,11 @@ import { SignInPayload, SignInResponse } from 'src/types/auth';
  * Sends a POST request to the `/api/auth/signin` endpoint to authenticate a user
  * with the provided credentials.
  *
- * The function serializes the user credentials as JSON and includes appropriate
- * headers for content type. It handles the response by parsing JSON and
- * returns a structured object indicating success or failure.
- *
+ * The function converts the user’s login information into JSON format and sets the 
+ * correct headers to indicate the content type. It processes the response by parsing 
+ * the JSON data and returns an object that clearly shows whether the login was successful 
+ * or not.
+ * 
  * On failure (non-OK HTTP status), it attempts to extract and return an error message
  * from the response. On success, it returns the authentication token along with
  * any message from the server.
