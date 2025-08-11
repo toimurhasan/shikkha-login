@@ -1,14 +1,43 @@
 'use client';
 
-import { Container, Typography, Box, Paper } from '@mui/material';
+import { Container, Box, Paper } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import SignInForm from 'src/components/form/SignInForm';
 
 const defaultTheme = createTheme();
 
 /**
- * Sign-in page layout.
+ * SignInPage Component
+ *
+ * This component serves as the entry point for the user sign-in process,
+ * providing a styled layout and theming context for the SignInForm component.
+ *
+ * Features:
+ * - Wraps the sign-in form inside Material UI's ThemeProvider with a default theme,
+ *   enabling consistent theming across the form and its child components.
+ * - Uses MUI's Container and Box components to center the form vertically and horizontally,
+ *   optimizing for small screen widths (`maxWidth="xs"`) to improve usability on mobile devices.
+ * - Encapsulates the SignInForm within a Paper component with padding and rounded corners,
+ *   providing a clean and focused card-like UI.
+ * - Applies a light grey background (`grey.100`) to the entire page for subtle contrast.
+ *
+ * This component does not manage any state itself but relies on the child SignInForm
+ * for all authentication-related logic.
+ *
+ * @component
+ *
+ * @returns {JSX.Element} A themed, responsive page layout containing the SignInForm.
+ *
+ * @example
+ * ```tsx
+ * import SignInPage from 'src/pages/signin';
+ *
+ * export default function App() {
+ *   return <SignInPage />;
+ * }
+ * ```
  */
+
 export default function SignInPage() {
   return (
     <ThemeProvider theme={defaultTheme}>
