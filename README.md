@@ -11,17 +11,7 @@ This project implements a modern sign-in flow using Next.js, React Hook Form, Zo
 - **Remember Me:** Optionally stores the token in localStorage or sessionStorage based on user choice.
 - **Error Handling:** Displays server and validation errors in the UI.
 
-## How It Works
-
-1. **Email Step:**
-   - User enters their email.
-   - Email is validated for format and presence.
-   - On success, proceeds to password step.
-2. **Password Step:**
-   - User sees their email and enters password.
-   - Password is validated for minimum length.
-   - On submit, credentials are sent to the API.
-   - On success, user is redirected to the dashboard.
+## Key Files 
 
 - `src/components/form/SignInForm.tsx`: Main sign-in form logic and flow.
 - `src/components/field/EmailInput.tsx`: Controlled email input field.
@@ -33,7 +23,7 @@ This project implements a modern sign-in flow using Next.js, React Hook Form, Zo
 
 ## Mock API Route
 
-The sign-in flow uses a mock API route for authentication, defined in `src/app/api/auth/signin/route.ts`:
+The sign-in flow uses a mock API route for authentication, defined in `src/app/api/auth/signin/route.ts`
 
 
 ### Test Credentials
@@ -50,11 +40,6 @@ Use these credentials to test the sign-in flow. Any other credentials will resul
    npm run dev
    ```
 2. Visit `/signin` to use the sign-in flow.
-
-## Customization
-
-- Update validation rules in `src/schemas/auth.tsx` as needed.
-- Modify API integration in `src/lib/api.ts` for your backend.
 
 ---
 
