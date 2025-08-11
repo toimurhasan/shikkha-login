@@ -49,7 +49,7 @@ export default function SignInForm() {
   // handles email step
   const handleEmailNext = () => {
     setServerError(null);
-    // validate email only
+    // email is required
     const email = getValues('email');
     if (!email) {
       setServerError('ইমেইল প্রদান করুন');
@@ -59,6 +59,12 @@ export default function SignInForm() {
     const emailRegex = /^[\w-.]+@[\w-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(email)) {
       setServerError('সঠিক ইমেইল প্রদান করুন');
+      return;
+    }
+
+    // Must end with '@shikkha.dev'
+    if (!email.endsWith('@shikkha.dev')) {
+      setServerError("ইমেইলটি '@shikkha.dev' দিয়ে শেষ হতে হবে");
       return;
     }
 
